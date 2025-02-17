@@ -1119,7 +1119,8 @@ function loadMapEnglish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-traffic", {
       type: "geojson",
-      data: "/scripts/hpdata/map-all-traffic.geojson"
+      // data: "/scripts/hpdata/map-all-traffic.geojson"
+      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@main/hpdata/map-all-traffic.geojson"
     });
     map.addLayer({
       "id": "all-traffic",
@@ -1144,7 +1145,8 @@ function loadMapEnglish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-scans", {
       type: "geojson",
-      data: "/scripts/hpdata/map-all-scans.geojson"
+      //data: "/scripts/hpdata/map-all-scans.geojson"
+      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@main/hpdata/map-all-scans.geojson"
     });
     map.addLayer({
       "id": "all-scans",
@@ -1170,7 +1172,8 @@ function loadMapEnglish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-attacks", {
       type: "geojson",
-      data: "/scripts/hpdata/map-all-attacks.geojson"
+      //data: "/scripts/hpdata/map-all-attacks.geojson"
+      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@main/hpdata/map-all-attacks.geojson"
     });
     map.addLayer({
       "id": "all-attacks",
@@ -1238,7 +1241,8 @@ function loadMapSpanish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-traffic", {
       type: "geojson",
-      data: "/scripts/hpdata/map-all-traffic.geojson"
+      //data: "/scripts/hpdata/map-all-traffic.geojson"
+      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@main/hpdata/map-all-traffic.geojson"
     });
     map.addLayer({
       "id": "all-traffic",
@@ -1263,7 +1267,8 @@ function loadMapSpanish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-scans", {
       type: "geojson",
-      data: "/scripts/hpdata/map-all-scans.geojson"
+      //data: "/scripts/hpdata/map-all-scans.geojson"
+      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@main/hpdata/map-all-scans.geojson"
     });
     map.addLayer({
       "id": "all-scans",
@@ -1290,6 +1295,8 @@ function loadMapSpanish() {
     map.addSource("all-attacks", {
       type: "geojson",
       data: "/scripts/hpdata/map-all-attacks.geojson"
+      data: "/scripts/hpdata/map-all-attacks.geojson"
+      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@main/hpdata/map-all-attacks.geojson"
     });
     map.addLayer({
       "id": "all-attacks",
