@@ -1294,8 +1294,7 @@ function loadMapSpanish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-attacks", {
       type: "geojson",
-      data: "/scripts/hpdata/map-all-attacks.geojson"
-      data: "/scripts/hpdata/map-all-attacks.geojson"
+      //data: "/scripts/hpdata/map-all-attacks.geojson"
       data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@main/hpdata/map-all-attacks.geojson"
     });
     map.addLayer({
