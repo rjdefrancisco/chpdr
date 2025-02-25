@@ -1089,9 +1089,9 @@ function loadMapEnglish() {
   let mapa = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-attacks.geojson" + "?v=" + String(Date.now()); // Map of origin of attacks
   let maps = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-scans.geojson" + "?v=" + String(Date.now());   // Map of origin of scans
   let mapt = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-traffic.geojson" + "?v=" + String(Date.now()); // Map of origin of traffic
-  let vat = urlParams.get("vat"); // Visibility of all-traffic layer
-  let vas = urlParams.get("vas"); // Visibility of all-scans layer
-  let vaa = urlParams.get("vaa"); // Visibility of all-attacks layer
+  let vat = urlParams.get("vat");                                  // Visibility of all-traffic layer
+  let vas = urlParams.get("vas");                                  // Visibility of all-scans layer
+  let vaa = urlParams.get("vaa");                                  // Visibility of all-attacks layer
 
 
   if (!vat && !vas && !vaa) vat = "visible";
@@ -1209,9 +1209,12 @@ function loadMapSpanish() {
   // Process URL parameters
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  let vat = urlParams.get("vat"); // Visibility of all-traffic layer
-  let vas = urlParams.get("vas"); // Visibility of all-scans layer
-  let vaa = urlParams.get("vaa"); // Visibility of all-attacks layer
+  let mapa = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-attacks.geojson" + "?v=" + String(Date.now()); // Map of origin of attacks
+  let maps = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-scans.geojson" + "?v=" + String(Date.now());   // Map of origin of scans
+  let mapt = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-traffic.geojson" + "?v=" + String(Date.now()); // Map of origin of traffic
+  let vat = urlParams.get("vat");                                  // Visibility of all-traffic layer
+  let vas = urlParams.get("vas");                                  // Visibility of all-scans layer
+  let vaa = urlParams.get("vaa");                                  // Visibility of all-attacks layer
 
   if (!vat && !vas && !vaa) vat = "visible";
   if (!vat) vat = "none";
@@ -1242,7 +1245,7 @@ function loadMapSpanish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-traffic", {
       type: "geojson",
-      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-traffic.geojson"
+      data: mapt
     });
     map.addLayer({
       "id": "all-traffic",
@@ -1267,7 +1270,7 @@ function loadMapSpanish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-scans", {
       type: "geojson",
-      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-scans.geojson"
+      data: maps
     });
     map.addLayer({
       "id": "all-scans",
@@ -1293,7 +1296,7 @@ function loadMapSpanish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-attacks", {
       type: "geojson",
-      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-all-attacks.geojson"
+      data: mapa
     });
     map.addLayer({
       "id": "all-attacks",
