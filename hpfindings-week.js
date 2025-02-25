@@ -1086,9 +1086,13 @@ function loadMapEnglish() {
   // Process URL parameters
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
+  let mapa = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-week-attacks.geojson" + "?v=" + String(Date.now()); // Map of origin of attacks
+  let maps = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-week-scans.geojson" + "?v=" + String(Date.now());   // Map of origin of scans
+  let mapt = "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-week-traffic.geojson" + "?v=" + String(Date.now()); // Map of origin of traffic
   let vat = urlParams.get("vat"); // Visibility of all-traffic layer
   let vas = urlParams.get("vas"); // Visibility of all-scans layer
   let vaa = urlParams.get("vaa"); // Visibility of all-attacks layer
+
 
   if (!vat && !vas && !vaa) vat = "visible";
   if (!vat) vat = "none";
@@ -1119,7 +1123,7 @@ function loadMapEnglish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-traffic", {
       type: "geojson",
-      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-week-traffic.geojson"
+      data: mapt
     });
     map.addLayer({
       "id": "all-traffic",
@@ -1144,7 +1148,7 @@ function loadMapEnglish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-scans", {
       type: "geojson",
-      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-week-scans.geojson"
+      data: maps
     });
     map.addLayer({
       "id": "all-scans",
@@ -1170,7 +1174,7 @@ function loadMapEnglish() {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-attacks", {
       type: "geojson",
-      data: "https://cdn.jsdelivr.net/gh/rjdefrancisco/chpdr@latest/map-week-attacks.geojson"
+      data: mapa
     });
     map.addLayer({
       "id": "all-attacks",
