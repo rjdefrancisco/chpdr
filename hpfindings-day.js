@@ -1116,6 +1116,7 @@ function loadMapEnglish() {
     toggler: true,
     highlight: true,
     minimized: true,
+    layers: ["all-attacks", "all-scans", "all-traffic"]
     }),
     'bottom-left');
   
@@ -1238,6 +1239,7 @@ function loadMapSpanish() {
     toggler: true,
     highlight: true,
     minimized: true,
+    layers: ["all-attacks", "all-scans", "all-traffic"]
     }),
     'bottom-left');
   
