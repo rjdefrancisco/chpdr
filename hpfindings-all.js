@@ -1076,11 +1076,11 @@ function listColumns4(listElement, column1Label, column1Data, column2Label, colu
   document.getElementById(listElement).innerHTML = strHTML;
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//                                                                            //
-// The following functions use the mapbox-gl and maxboxgl-legend JS libraries //
-//                                                                            //
-////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//                                                                              //
+// The following functions use the maplibre-gl and maxboxgl-legend JS libraries //
+//                                                                              //
+//////////////////////////////////////////////////////////////////////////////////
 
 function loadMapEnglish() {
   // Process URL parameters
@@ -1099,14 +1099,13 @@ function loadMapEnglish() {
   if (!vas) vas = "none";
   if (!vaa) vaa = "none";
   
-  // Restricted to this site
-  mapboxgl.accessToken = "pk.eyJ1IjoicmRlZnJhbmNpc2NvIiwiYSI6ImNsbXYxcHRxeDBmejEyanBjN3VpNG1vYXMifQ.rXdgexSxKXg3Cqk9omlirA";
-  
-  const map = new mapboxgl.Map({
-    container: "map",                          // container ID
-    style: "mapbox://styles/mapbox/light-v10", // style URL
-    zoom: 2,                                   // starting zoom
-    center: [-25.00, 20.00]                    // starting center
+  const map = new maplibregl.Map({
+    container: "map",                                                                    // container ID
+    style: '/scripts/voyager-nolabels-gl-style.json',                                    // map style: light with a touch of color
+  //style: 'https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json',     // map style: light`
+  //style: 'https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json',  // map style: dark
+    zoom: 2,                                                                             // starting zoom
+    center: [-25.00, 20.00]                                                              // starting center
   });
 
   document.getElementById('map-title').innerHTML = "Updated 2025-3-10";
@@ -1119,7 +1118,7 @@ function loadMapEnglish() {
     }),
     'bottom-left');
   
-  map.on("load", () => {
+  map.on("load", async () => {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-traffic", {
       type: "geojson",
@@ -1202,7 +1201,7 @@ function loadMapEnglish() {
 
   setTimeout(function() {
     map.resize();
-  }, 2500); // This timeout should the a bit longer than the  timeout of the page loader
+  }, 500); // This timeout should the a bit longer than the  timeout of the page loader
 }
 
 function loadMapSpanish() {
@@ -1221,14 +1220,13 @@ function loadMapSpanish() {
   if (!vas) vas = "none";
   if (!vaa) vaa = "none";
   
-  // Restricted to this site
-  mapboxgl.accessToken = "pk.eyJ1IjoicmRlZnJhbmNpc2NvIiwiYSI6ImNsbXYxcHRxeDBmejEyanBjN3VpNG1vYXMifQ.rXdgexSxKXg3Cqk9omlirA";
-  
-  const map = new mapboxgl.Map({
-    container: "map",                          // container ID
-    style: "mapbox://styles/mapbox/light-v10", // style URL
-    zoom: 2,                                   // starting zoom
-    center: [-25.00, 20.00]                    // starting center
+  const map = new maplibregl.Map({
+    container: "map",                                                                    // container ID
+    style: '/scripts/voyager-nolabels-gl-style.json',                                    // map style: light with a touch of color
+  //style: 'https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json',     // map style: light`
+  //style: 'https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json',  // map style: dark
+    zoom: 2,                                                                             // starting zoom
+    center: [-25.00, 20.00]                                                              // starting center
   });
 
   document.getElementById('map-title').innerHTML = "Actualizado 2025-3-10";
@@ -1241,7 +1239,7 @@ function loadMapSpanish() {
     }),
     'bottom-left');
   
-  map.on("load", () => {
+  map.on("load", async () => {
     ///////////////////////////////////////////////////////////////////////
     map.addSource("all-traffic", {
       type: "geojson",
@@ -1324,7 +1322,7 @@ function loadMapSpanish() {
 
   setTimeout(function() {
     map.resize();
-  }, 3000);
+  }, 500);
 }
 
 //////////////////////////////////////////////////////
