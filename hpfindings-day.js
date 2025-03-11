@@ -1105,7 +1105,8 @@ function loadMapEnglish() {
   //style: 'https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json',     // map style: light`
   //style: 'https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json',  // map style: dark
     zoom: 2,                                                                             // starting zoom
-    center: [-25.00, 20.00]                                                              // starting center
+    center: [-25.00, 20.00],                                                             // starting center
+    attributionControl: false                                                            // toggle the attribution button off
   });
 
   document.getElementById('map-title').innerHTML = "Updated 2025-3-10";
@@ -1226,7 +1227,8 @@ function loadMapSpanish() {
   //style: 'https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json',     // map style: light`
   //style: 'https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json',  // map style: dark
     zoom: 2,                                                                             // starting zoom
-    center: [-25.00, 20.00]                                                              // starting center
+    center: [-25.00, 20.00],                                                             // starting center
+    attributionControl: false                                                            // toggle the attribution button off
   });
 
   document.getElementById('map-title').innerHTML = "Actualizado 2025-3-10";
