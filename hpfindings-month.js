@@ -1201,9 +1201,9 @@ function loadMapEnglish() {
     ///////////////////////////////////////////////////////////////////////
   });
 
-  setTimeout(function() {
-    map.resize();
-  }, 500); // This timeout should the a bit longer than the  timeout of the page loader
+  // setTimeout(function() {
+  //   map.resize();
+  // }, 500); // This timeout should the a bit longer than the  timeout of the page loader
 }
 
 function loadMapSpanish() {
