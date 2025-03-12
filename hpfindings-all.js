@@ -326,8 +326,8 @@ function isNumber(value) {
 }
 
 // Print the date when the data was last updated
-function lastUpdated() {
-  document.getElementById("last-updated").innerHTML = "2025-3-12";
+function lastUpdated(varElement) {
+  document.getElementById(varElement).innerHTML = "2025-3-12";
 }
 
 // Print the length in hours of each click in the trend chart (American number formatting)
@@ -1109,8 +1109,6 @@ function loadMapEnglish() {
     attributionControl: false                                                            // toggle the attribution button off
   });
 
-  document.getElementById('map-title').innerHTML = "Updated 2025-3-12";
-
   map.addControl(new LegendControl({
     collapsed: true,
     toggler: true,
@@ -1231,8 +1229,6 @@ function loadMapSpanish() {
     center: [-25.00, 20.00],                                                             // starting center
     attributionControl: false                                                            // toggle the attribution button off
   });
-
-  document.getElementById('map-title').innerHTML = "Actualizado 2025-3-12";
 
   map.addControl(new LegendControl({
     collapsed: true,
